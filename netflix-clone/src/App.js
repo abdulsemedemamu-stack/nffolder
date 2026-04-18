@@ -1,9 +1,13 @@
 import "./App.css";
+import React from "react";
+import Home from "./pages/Home/Home";
+
+// This connects the file to the component name
 
 function App() {
   return (
     <div className="App">
-      <h1>hello world</h1>
+      <Home />
     </div>
   );
 }
