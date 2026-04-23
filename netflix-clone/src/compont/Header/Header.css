@@ -6,12 +6,10 @@
   top: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* background-color: transparent; */
+  align-items: center; /* background-color: transparent; */
   height: 10vh;
   transition: all 0.5s;
   transition-timing-function: ease ease-in;
-
   z-index: 1000;
 }
 .nav-black {
@@ -21,12 +19,10 @@
   width: 90%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* background-color: yellow; */
+  align-items: center; /* background-color: yellow; */
 }
 .header-left ul {
   width: 140%;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,4 +35,23 @@
   justify-content: space-around;
   list-style: none;
   cursor: pointer;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  height: 35px; /* controls logo size */
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.header-left ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
 }
