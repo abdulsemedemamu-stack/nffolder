@@ -1,4 +1,4 @@
-/* Main container */
+/* ================= HEADER OUTER ================= */
 .header-outer-container {
   background-color: rgb(20, 20, 20);
   color: white;
@@ -6,52 +6,110 @@
   top: 0;
   display: flex;
   justify-content: center;
-  align-items: center; /* background-color: transparent; */
-  height: 10vh;
-  transition: all 0.5s;
-  transition-timing-function: ease ease-in;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  transition: all 0.5s ease-in-out;
   z-index: 1000;
 }
+
 .nav-black {
   background-color: rgb(20, 20, 20);
 }
-.header-cotainer {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* background-color: yellow; */
-}
-.header-left ul {
-  width: 140%;
+
+/* ================= INNER CONTAINER ================= */
+.header-container {
+  width: 100%;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  list-style: none;
-  cursor: pointer;
-}
-.header-right ul {
-  width: 150%;
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  cursor: pointer;
 }
 
+/* ================= LEFT SECTION ================= */
 .header-left {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 20px;
 }
 
+/* Logo */
 .logo {
-  height: 35px; /* controls logo size */
+  height: 30px;
   object-fit: contain;
   cursor: pointer;
 }
 
+/* Left Menu */
 .header-left ul {
   display: flex;
   align-items: center;
   gap: 20px;
   list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* ================= RIGHT SECTION ================= */
+.header-right ul {
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* ================= HOVER EFFECT ================= */
+.header-left li:hover,
+.header-right li:hover {
+  color: #e50914; /* Netflix red */
+  transition: 0.3s;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .header-left ul {
+    display: none; /* hide menu on small screens */
+  }
+
+  .header-right ul {
+    gap: 10px;
+  }
+
+  .logo {
+    height: 25px; /* smaller logo */
+  }
+}
+
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .header-left ul {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .header-right ul {
+    gap: 15px;
+  }
+
+  .logo {
+    height: 28px;
+  }
+}
+
+/* 💻 Large Screens */
+@media (min-width: 1400px) {
+  .header-container {
+    max-width: 1600px;
+  }
+
+  .logo {
+    height: 40px;
+  }
 }

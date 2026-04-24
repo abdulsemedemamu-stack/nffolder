@@ -10,6 +10,7 @@ const RowList = () => {
         isLargeRow={true}
       />
       <Row title="Trending Row" fetchUrl={requests.fetchTrending} />
+      <Row title=" fetch-ActionMovies" fetchUrl={requests.fetchActionMovies} />
     </>
   );
 };
