@@ -20,9 +20,7 @@
 /* ================= INNER CONTAINER ================= */
 .header-container {
   width: 100%;
-  max-width: 1400px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -51,23 +49,28 @@
   cursor: pointer;
 }
 
+/* ================= HOVER EFFECT ================= */
+.header-left li:hover,
+.header-right li:hover {
+  color: #e50914;
+  transition: 0.3s;
+}
+
 /* ================= RIGHT SECTION ================= */
+.header-right {
+  margin-left: auto;
+}
+
 .header-right ul {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: flex-end;
   gap: 20px;
   list-style: none;
   padding: 0;
+  margin-bottom: 10px;
   margin: 0;
   cursor: pointer;
-}
-
-/* ================= HOVER EFFECT ================= */
-.header-left li:hover,
-.header-right li:hover {
-  color: #e50914; /* Netflix red */
-  transition: 0.3s;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -75,7 +78,7 @@
 /* 📱 Mobile */
 @media (max-width: 768px) {
   .header-left ul {
-    display: none; /* hide menu on small screens */
+    display: none;
   }
 
   .header-right ul {
@@ -83,7 +86,7 @@
   }
 
   .logo {
-    height: 25px; /* smaller logo */
+    height: 25px;
   }
 }
 
